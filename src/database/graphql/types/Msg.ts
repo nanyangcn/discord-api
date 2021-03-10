@@ -4,8 +4,11 @@ import { IResolvers } from 'graphql-tools';
 const typeDefs = gql`
   type Msg {
     id: ID!
-    title: String!
-    done: Boolean!
+    owner: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+    }
+    room: String!
   }
 `;
 
