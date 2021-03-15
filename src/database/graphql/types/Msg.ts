@@ -8,7 +8,10 @@ const typeDefs = gql`
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User',
     }
-    room: String!
+    room: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Room',
+    }
   }
 `;
 
